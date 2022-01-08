@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  recipemanagement-db:
+    image: postgres
+    restart: always
+    ports:
+      - '58245:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=dev_recipemanagement
+    volumes:
+      - recipemanagement-data:/var/lib/postgresql/data
+
+  recipemanagement-api:
+    build:
+      context: "./RecipeManagement/src/RecipeManagement"
+      dockerfile: "Dockerfile"
+    ports:
+      - "58246:443"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "DockerLocal"
+      DB_CONNECTION_STRING: "Host=recipemanagement-db;Port=5432;Database=dev_recipemanagement;Username=postgres;Password=postgres"
+      #WELL_KNOWN_ENDPOINT: "https://host.docker.internal:/.well-known/jwks.json"
+      ASPNETCORE_Kestrel__Certificates__Default__Path: "/https/aspnetappcert.pfx"
+      ASPNETCORE_Kestrel__Certificates__Default__Password: "password"
+    volumes:
+      - ~/.aspnet/https:/https:ro
+        
+volumes:
+  recipemanagement-data:

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RecipeManagement", "RecipeManagement", "{D909E04F-9451-451F-96A0-CCFA17E914DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{92BA8726-7F00-4A6A-9C9A-5E1449B79D6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeManagement", "RecipeManagement\src\RecipeManagement\RecipeManagement.csproj", "{AC38CD8C-F172-459E-9DC6-1C0455695563}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{63340CF8-E6C6-4919-B8C2-F04826C64FF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeManagement.IntegrationTests", "RecipeManagement\tests\RecipeManagement.IntegrationTests\RecipeManagement.IntegrationTests.csproj", "{E82C9A9B-55A9-416E-9470-B0F3BB2416E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeManagement.FunctionalTests", "RecipeManagement\tests\RecipeManagement.FunctionalTests\RecipeManagement.FunctionalTests.csproj", "{D7EC49B5-A62C-4000-BD28-AAEADE2EAE97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeManagement.SharedTestHelpers", "RecipeManagement\tests\RecipeManagement.SharedTestHelpers\RecipeManagement.SharedTestHelpers.csproj", "{F6FABFEA-23E7-444B-9F9D-3ED6632225C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeManagement.UnitTests", "RecipeManagement\tests\RecipeManagement.UnitTests\RecipeManagement.UnitTests.csproj", "{881E5D6B-C712-43F1-9810-EEBAFB9D85D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC38CD8C-F172-459E-9DC6-1C0455695563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC38CD8C-F172-459E-9DC6-1C0455695563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC38CD8C-F172-459E-9DC6-1C0455695563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC38CD8C-F172-459E-9DC6-1C0455695563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82C9A9B-55A9-416E-9470-B0F3BB2416E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82C9A9B-55A9-416E-9470-B0F3BB2416E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82C9A9B-55A9-416E-9470-B0F3BB2416E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82C9A9B-55A9-416E-9470-B0F3BB2416E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7EC49B5-A62C-4000-BD28-AAEADE2EAE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7EC49B5-A62C-4000-BD28-AAEADE2EAE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7EC49B5-A62C-4000-BD28-AAEADE2EAE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7EC49B5-A62C-4000-BD28-AAEADE2EAE97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6FABFEA-23E7-444B-9F9D-3ED6632225C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6FABFEA-23E7-444B-9F9D-3ED6632225C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6FABFEA-23E7-444B-9F9D-3ED6632225C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6FABFEA-23E7-444B-9F9D-3ED6632225C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{881E5D6B-C712-43F1-9810-EEBAFB9D85D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881E5D6B-C712-43F1-9810-EEBAFB9D85D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881E5D6B-C712-43F1-9810-EEBAFB9D85D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881E5D6B-C712-43F1-9810-EEBAFB9D85D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{92BA8726-7F00-4A6A-9C9A-5E1449B79D6E} = {D909E04F-9451-451F-96A0-CCFA17E914DB}
+		{AC38CD8C-F172-459E-9DC6-1C0455695563} = {92BA8726-7F00-4A6A-9C9A-5E1449B79D6E}
+		{63340CF8-E6C6-4919-B8C2-F04826C64FF4} = {D909E04F-9451-451F-96A0-CCFA17E914DB}
+		{E82C9A9B-55A9-416E-9470-B0F3BB2416E7} = {63340CF8-E6C6-4919-B8C2-F04826C64FF4}
+		{D7EC49B5-A62C-4000-BD28-AAEADE2EAE97} = {63340CF8-E6C6-4919-B8C2-F04826C64FF4}
+		{F6FABFEA-23E7-444B-9F9D-3ED6632225C3} = {63340CF8-E6C6-4919-B8C2-F04826C64FF4}
+		{881E5D6B-C712-43F1-9810-EEBAFB9D85D5} = {63340CF8-E6C6-4919-B8C2-F04826C64FF4}
+	EndGlobalSection
+EndGlobal
