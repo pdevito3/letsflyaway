@@ -16,7 +16,8 @@ RUN dotnet publish "RecipeManagement.csproj" -c Release -o /app/out
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 COPY --from=publish /app/out .
 
-ENV ASPNETCORE_URLS=https://+:443
+ENV ASPNETCORE_URLS=https://+:8080
+EXPOSE 8080
 EXPOSE 443
 
 ENTRYPOINT ["dotnet", "RecipeManagement.dll"]
