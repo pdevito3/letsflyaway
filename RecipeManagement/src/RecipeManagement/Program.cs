@@ -37,7 +37,7 @@ public class Program
             .ConfigureWebHostDefaults(webBuilder =>
             {
                 webBuilder.UseStartup(typeof(Startup).GetTypeInfo().Assembly.FullName)
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseKestrel();
+                    .UseContentRoot(Directory.GetCurrentDirectory());
+                // .UseKestrel();
             });
 }
