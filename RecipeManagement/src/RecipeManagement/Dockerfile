@@ -14,10 +14,11 @@ RUN dotnet publish "RecipeManagement.csproj" -c Release -o /app/out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
+WORKDIR /app
 COPY --from=publish /app/out .
 
 ENV ASPNETCORE_URLS=https://+:8080
 EXPOSE 8080
-EXPOSE 443
+#EXPOSE 443
 
-ENTRYPOINT ["dotnet", "RecipeManagement.dll"]
+ENTRYPOINT ["dotnet", "/app/RecipeManagement.dll"]
