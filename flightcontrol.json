@@ -14,7 +14,6 @@
           "type": "fargate",
           "cpu": 0.25,
           "memory": 512,
-          "domain": "example.com",
           "dockerfilePath": "./RecipeManagement/src/RecipeManagement/Dockerfile",
           "dockerContext": "./RecipeManagement/src/RecipeManagement",
           "port": 8080,
