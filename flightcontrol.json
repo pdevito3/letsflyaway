@@ -1,0 +1,31 @@
+{
+  "environments": [
+    {
+      "id": "fcGeneral",
+      "name": "FC General",
+      "region": "us-east-1",
+      "source": {
+        "branch": "master"
+      },
+      "services": [
+        {
+          "id": "letsFlyAway",
+          "name": "letsFlyAway",
+          "type": "fargate",
+          "cpu": 0.25,
+          "memory": 512,
+          "domain": "example.com",
+          "dockerfilePath": "Dockerfile",
+          "dockerContext": ".",
+          "port": 8080,
+          "minInstances": 1,
+          "maxInstances": 1,
+          "envVariables": {
+            "PORT": "8080",
+            "ASPNETCORE_ENVIRONMENT": "Development"
+          }
+        }
+      ]
+    }
+  ]
+}
