@@ -63,7 +63,7 @@ public class Startup
 
         // For elevated security, it is recommended to remove this middleware and set your server to only listen on https.
         // A slightly less secure option would be to redirect http to 400, 505, etc.
-        app.UseHttpsRedirection();
+        // app.UseHttpsRedirection();
 
         app.UseCors("RecipeManagementCorsPolicy");
 
