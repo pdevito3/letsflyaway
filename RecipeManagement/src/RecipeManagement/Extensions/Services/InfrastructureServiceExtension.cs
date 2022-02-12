@@ -9,18 +9,18 @@ public static class ServiceRegistration
     public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration, IWebHostEnvironment env)
     {
         // DbContext -- Do Not Delete
-        if (env.IsEnvironment(LocalConfig.FunctionalTestingEnvName) || env.IsDevelopment())
-        {
-            services.AddDbContext<RecipesDbContext>(options =>
-                options.UseInMemoryDatabase($"RecipeManagement"));
-        }
-        else
-        {
+        // if (env.IsEnvironment(LocalConfig.FunctionalTestingEnvName) || env.IsDevelopment())
+        // {
+        //     services.AddDbContext<RecipesDbContext>(options =>
+        //         options.UseInMemoryDatabase($"RecipeManagement"));
+        // }
+        // else
+        // {
             services.AddDbContext<RecipesDbContext>(options =>
                 options.UseNpgsql(
                     Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") ?? "placeholder-for-migrations",
                     builder => builder.MigrationsAssembly(typeof(RecipesDbContext).Assembly.FullName)));
-        }
+        // }
 
         // Auth -- Do Not Delete
     }
