@@ -20,7 +20,6 @@
           "minInstances": 1,
           "maxInstances": 1,
           "envVariables": {
-            "PORT": "8080",
             "ASPNETCORE_ENVIRONMENT": "Development",
             "DB_CONNECTION_STRING": {
               "fromService": {
