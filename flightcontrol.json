@@ -9,8 +9,8 @@
       },
       "services": [
         {
-          "id": "letsFlyAway",
-          "name": "letsFlyAway",
+          "id": "letsFlyAwayApi",
+          "name": "letsFlyAwayApi",
           "type": "fargate",
           "cpu": 0.25,
           "memory": 512,
@@ -21,8 +21,24 @@
           "maxInstances": 1,
           "envVariables": {
             "PORT": "8080",
-            "ASPNETCORE_ENVIRONMENT": "Development"
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "DB_CONNECTION_STRING": {
+              "fromService": {
+                "id": "letsFlyAwayDb",
+                "value": "dbConnectionString"
+              }
+            }
           }
+        },
+        {
+          "id": "letsFlyAwayDb",
+          "name": "letsFlyAwayDb",
+          "type": "rds",
+          "engine": "postgres",
+          "engineVersion": "12",
+          "instanceSize": "db.t2.micro",
+          "storage": 20,
+          "private": false
         }
       ]
     }
